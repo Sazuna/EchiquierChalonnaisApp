@@ -12,8 +12,8 @@ public class ServerMap{
     }
 
     public String[] getServer(String mail) {
-        String split = mail.split("@")[1];
-        String key = split.split(".")[0];
+        String key = mail.split("@")[1];
+        key = key.split(".")[0];
         return map.get(key);
     }
 }

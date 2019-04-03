@@ -11,6 +11,7 @@ import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
+import server.ServerMap;
 import user.Infos;
 
 /*
@@ -19,6 +20,9 @@ import user.Infos;
 
 
 public class SendMail {
+    
+    Infos infos = new Infos();
+    String[] socket = new ServerMap().getServer(infos.getMail());
 
     String name = "Echiquier Chalonnais";
     String subject = "Envoi email";
