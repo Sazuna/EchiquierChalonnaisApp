@@ -25,79 +25,13 @@ import user.Infos;
 
 public class SendMail {
 
-    /*
-    Infos infos = new Infos();
     String name = "Echiquier Chalonnais";
     String subject = "Envoi email";
     String body = "Ceci est le contenu du mail";
     String from = "fretelliza@gmail.com";
     String to = "fretelliza@gmail.com";
-
-
-    public void sendMail() {
-        Properties properties = new Properties();
-        properties.put("mail" , from);
-        Session session  = Session.getDefaultInstance( properties , null);
-        Message msg = new MimeMessage(session);
-        try {
-            //Essai HTML
-            String texte = "<H1>bonjour</H1><a href=\"mailto:moi@moi.fr\">mail</a>";
-            msg.setContent(texte, "text/html");
-
-
-            msg.setFrom(new InternetAddress(from));
-            msg.setRecipient(Message.RecipientType.TO , new InternetAddress(to));
-            msg.setSubject(subject);
-            //msg.setText(body);
-            msg.writeTo(System.out);
-            Transport trans = session.getTransport();
-            trans.connect();
-
-            Transport.send(msg);  
-        }  catch(Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-
-    private final static String MAILER_VERSION = "Java";
-    public static boolean envoyerMailSMTP(String serveur, boolean debug) {
-        boolean result = false;
-        try {
-            Properties prop = System.getProperties();
-            prop.put("mail.smtp.host", serveur);
-            Session session = Session.getDefaultInstance(prop,null);
-            Message message = new MimeMessage(session);
-            message.setFrom(new InternetAddress("fretelliza@gmail.com"));
-            InternetAddress[] internetAddresses = new InternetAddress[1];
-            internetAddresses[0] = new InternetAddress("fretelliza@gmail.com");
-            message.setRecipients(Message.RecipientType.TO,internetAddresses);
-            message.setSubject("Test");
-            message.setText("test mail");
-            message.setHeader("X-Mailer", MAILER_VERSION);
-            message.setSentDate(new Date());
-            message.writeTo(System.out);
-            session.setDebug(debug);
-            Transport.send(message);
-            result = true;
-        } catch (AddressException e) {
-            e.printStackTrace();
-        } catch (MessagingException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return result;
-    }
     
-    */
-
-
-
     public static void main(String[] args) {
-
-       // envoyerMailSMTP("10.39.5.39",true);
-       // new SendMail().sendMail();
         
         String host = "smtp.gmail.com";
         String user = "user";
