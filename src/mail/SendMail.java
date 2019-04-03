@@ -20,23 +20,27 @@ import user.Infos;
 
 
 public class SendMail {
+    private String user;
+    private String from;
+    private String to;
+    private String host;
+    private String port;
+    private String name;
+    private String pass;
     
-    Infos infos = new Infos();
-    String[] socket = new ServerMap().getServer(infos.getMail());
-
-    String name = "Echiquier Chalonnais";
-    String subject = "Envoi email";
-    String body = "Ceci est le contenu du mail";
-    String from = "fretelliza@gmail.com";
-    String to = "fretelliza@gmail.com";
+    public SendMail() {
+        Infos infos = new Infos();
+        user = infos.getMail();
+        from = infos.getMail();
+        to = "fretelliza@gmail.com";
+        String[] socket = new ServerMap().getServer(from);
+        host = socket[0];
+        port = socket[1];
+        name = infos.getName();
+        pass = infos.getPassword();
+    }
     
-    public static void main(String[] args) {
-        
-        String host = "smtp.gmail.com";
-        String user = "user";
-        String pass = "pass";
-        String to = "to";
-        String from = "from";
+    public void sendMail() {
         String subject = "Subject";
         String text = "Text";
         
@@ -45,7 +49,8 @@ public class SendMail {
         Properties props = System.getProperties();
         props.put("mail.smtp.starttls.enable", "true");
         props.put("mail.smtp.host", host);
-        props.put("mail.smtp.port", "587");
+       // props.put("mail.smtp.port", "587");
+        props.put("mail.smtp.port", port);
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.required", "true");
         
