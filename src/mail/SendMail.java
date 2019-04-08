@@ -27,7 +27,9 @@ public class SendMail {
     private String port;
     private String name;
     private String pass;
-    
+    private String subject;
+    private String text;
+
     public SendMail() {
         Infos infos = new Infos();
         user = infos.getMail();
@@ -39,7 +41,23 @@ public class SendMail {
         name = infos.getName();
         pass = infos.getPassword();
     }
-    
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setSubject(String subject) {
+        this.subject = subject;
+    }
+
+    public String getSubject() {
+        return subject;
+    }
+
     public void sendMail() {
         String subject = "Subject";
         String text = "Text";

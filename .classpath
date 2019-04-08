@@ -6,9 +6,9 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/fretel/Downloads/Java Jars/javax.mail.jar"/>
-	<classpathentry kind="lib" path="/home/fretel/Downloads/Java Jars/activation.jar"/>
-	<classpathentry kind="lib" path="/home/fretel/Downloads/Java Jars/mail.jar"/>
-	<classpathentry kind="lib" path="/home/fretel/Downloads/Java Jars/smtp-1.5.0.jar"/>
+	<classpathentry kind="lib" path="/home/fretel/eclipse-workspace/echiquierChalonnaisApp/lib/javax.mail.jar"/>
+	<classpathentry kind="lib" path="/home/fretel/eclipse-workspace/echiquierChalonnaisApp/lib/activation.jar"/>
+	<classpathentry kind="lib" path="/home/fretel/eclipse-workspace/echiquierChalonnaisApp/lib/mail.jar"/>
+	<classpathentry kind="lib" path="/home/fretel/eclipse-workspace/echiquierChalonnaisApp/lib/smtp-1.5.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
